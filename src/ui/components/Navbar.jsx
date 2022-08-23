@@ -37,7 +37,7 @@ export const Navbar = () => {
                     </NavLink>
 
                     <NavLink 
-                          className={ ({ isActive }) => `nav-item nav-link ${ isActive ? "active" : "" }`}
+                          className={ ({ isActive }) => `nav-item nav-link ${ isActive ? "active" : "" }` }
                         // className="nav-item nav-link"
 
                         to="/dc"
@@ -45,7 +45,7 @@ export const Navbar = () => {
                         DC
                     </NavLink>
                     <NavLink 
-                          className={ ({ isActive }) => `nav-item nav-link ${ isActive ? "active" : "" }`}
+                          className={ ({ isActive }) => `nav-item nav-link ${ isActive ? "active" : "" }` }
                         // className="nav-item nav-link"
 
                         to="/search"
@@ -61,7 +61,7 @@ export const Navbar = () => {
                         Tomas
                     </span>
                     <button
-                        onClick={onLogout}
+                        onClick={ onLogout }
                         className='nav-item nav-link btn'
                     >
                         Logout
