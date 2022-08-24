@@ -28,7 +28,7 @@ export const SearchPage = () => {
 
     navigate(`?q=${ searchText }`); //searchtext.toLowerCase().trim() tambien se puden poner esas validaciones
     
-    console.log({location});
+    // console.log({location});
 
   }
 

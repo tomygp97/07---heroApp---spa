@@ -1,18 +1,24 @@
+import { useContext } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../auth';
 
 
 export const Navbar = () => {
 
+    const { user, logout } = useContext( AuthContext ); // Los reducers no llaman nada externo (API, Axios, localStorage)
+
     const navigate = useNavigate();
 
     const onLogout = () => {
+
+        logout();
 
         navigate("/login", {
             replace: true,  //evita que la persona pueda regresar a la pagina anterior 
         })
 
         
-        console.log("logut");
+        // console.log("logut");
     }
 
     return (
@@ -58,7 +64,7 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     <span className="nav-item nav-link text-primary">
-                        Tomas
+                        { user?.name }
                     </span>
                     <button
                         onClick={ onLogout }
