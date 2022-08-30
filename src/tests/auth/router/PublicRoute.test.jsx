@@ -52,8 +52,7 @@ describe('Tests in <PublicRoute /> ', () => {
             </AuthContext.Provider>
         );
 
-        screen.debug();
-
+        expect( screen.getByText("Marvel Page") ).toBeTruthy();
 
     })
 
